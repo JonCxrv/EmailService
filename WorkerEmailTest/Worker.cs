@@ -29,6 +29,7 @@ namespace WorkerEmailTest
                     SmtpClient SmtpServer = new SmtpClient("smtp.live.com");
                     var emails = new StreamReader("C:\\emailTeste\\emails.txt");
                     mail.From = new MailAddress("email");
+
                     foreach (var email in emails.ReadLine().Split(','))
                     {
                         mail.To.Add(email);
